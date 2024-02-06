@@ -53,4 +53,14 @@ async def add(ctx):
 
     database.commit()
 
+# adds the todo to a new table in the same database
+# connected to each user through the users ID
+@client.command()
+async def todo(ctx):
+    sql = "INSERT INTO todolist (todo, user_id) VALUES (%s, %s)"
+    value = (ctx.message.content, ctx.author.id)
+    cursor.execute(sql, value)
+
+    database.commit()
+
 client.run('Token')
