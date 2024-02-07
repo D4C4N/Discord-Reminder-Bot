@@ -83,4 +83,14 @@ async def removeall(ctx):
 
     database.commit()
 
+# Remove only one from todo list
+@client.command()
+async def remove(ctx):
+    toDelete = ctx.message.content
+    toDeleteSplit = ' '.join(toDelete.split()[1:])
+
+    cursor.execute(f'DELETE FROM todolist WHERE todo = ("{toDeleteSplit}")')
+
+    database.commit()   
+
 client.run('Token')
