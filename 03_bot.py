@@ -72,4 +72,11 @@ async def list(ctx):
     for row in rows:
         await ctx.send(row["todo"])
 
+# Clear todo list bound to ID
+@client.command()
+async def removeall(ctx):
+    cursor.execute(f"DELETE FROM todolist WHERE user_id = ({ctx.author.id})")
+
+    database.commit()
+
 client.run('Token')
