@@ -55,10 +55,14 @@ async def add(ctx):
 
 # adds the todo to a new table in the same database
 # connected to each user through the users ID
+# splitting is used to prevent the command to be also entered in the database
 @client.command()
 async def todo(ctx):
+    message = ctx.message.content
+    messageSplit = ' '.join(message.split()[1:])
+
     sql = "INSERT INTO todolist (todo, user_id) VALUES (%s, %s)"
-    value = (ctx.message.content, ctx.author.id)
+    value = (messageSplit, ctx.author.id)
     cursor.execute(sql, value)
 
     database.commit()
