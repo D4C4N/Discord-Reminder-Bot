@@ -63,4 +63,13 @@ async def todo(ctx):
 
     database.commit()
 
+# lists all of the todos from the database bound to ID
+@client.command()
+async def list(ctx):
+    cursor.execute(f"SELECT todo from todolist where user_id = {ctx.author.id}")
+
+    rows = cursor.fetchall()
+    for row in rows:
+        await ctx.send(row["todo"])
+
 client.run('Token')
