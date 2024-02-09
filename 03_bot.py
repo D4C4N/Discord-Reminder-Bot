@@ -52,9 +52,12 @@ async def on_member_join(member):
 @client.command()
 async def info(ctx):
   await ctx.send('''
-1. Use ".todo " to write your tasks
-2. Use ".remove (task)" to delete a specifc task
-3. Use ".removeall" to clear the entire list
+1. Use ".todo " to write your tasks.
+2. Use ".due (Task) (Due)" to add a due to the task.
+3. Use ".list" to return all tasks.
+4. Use ".removedue (task)" to remove the due from the task.
+5. Use ".remove (task)" to delete a specifc task.
+6. Use ".removeall" to clear the entire list.
                  ''')
 
 # Adds tasks to a database bound to the users ID
@@ -80,7 +83,6 @@ async def due(ctx):
   taskSplit = ' '.join(message.split()[1:2])
   dueToSplit = ' '.join(message.split()[2:])
 
-  #INSERT INTO `todolist` (`todo`, `due_to`, `user_id`) VALUES ('', 'yes', '') 
   sql = "UPDATE todolist SET due_to = %s WHERE todo = %s and user_id = %s"
   value = (dueToSplit, taskSplit, author_id)
 
@@ -138,5 +140,18 @@ async def remove(ctx):
   await ctx.send(f'Removed "{toDeleteSplit}" from the list.')   
 
 #Remove Due
+@client.command()
+async def removedue(ctx):
+  toDeleteDue = ctx.message.content
+  toDeleteDueSplit = ' '.join(toDeleteDue.split()[1:])
+
+  sql = "UPDATE todolist SET due_to = NULL WHERE todo = %s"
+  value = (toDeleteDueSplit,)
+
+  cursor.execute(sql, value)
+
+  database.commit()
+
+  await ctx.send(f'Removed due from "{toDeleteDueSplit}".')   
 
 client.run('MTIwMjk4NjgyMDM1MTE2NDQxNg.GEbJCG.S3gZ9C2Y8TdRlRUcbPFOI5msZR7HkpqApaH3zk')
