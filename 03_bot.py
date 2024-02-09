@@ -38,7 +38,6 @@ async def hello(ctx):
 @client.command()
 async def goodbye(ctx):
   await ctx.send("Adios")
-  
 
 # welcomes member
 @client.event
@@ -49,21 +48,16 @@ async def on_member_join(member):
 
   await channel.send(f"Welcome, {member}")
 
-
-# adds the user-id to the database
+# Help
 @client.command()
-async def add(ctx):
-  author_id = ctx.author.id
+async def info(ctx):
+  await ctx.send('''
+1. Use ".todo " to write your tasks
+2. Use ".remove (task)" to delete a specifc task
+3. Use ".removeall" to clear the entire list
+                 ''')
 
-  sql = "INSERT INTO users (ID) VALUES %s"
-  values = (author_id,)
-
-  cursor.execute(sql, values)
-
-  database.commit()
-
-# adds the todo to a new table in the same database
-# connected to each user through the users ID
+# Adds tasks to a database bound to the users ID
 # splitting is used to prevent the command to be also entered in the database
 @client.command()
 async def todo(ctx):
