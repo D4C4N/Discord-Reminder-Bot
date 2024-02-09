@@ -71,19 +71,42 @@ async def todo(ctx):
 
   database.commit()
 
+# Due to
+@client.command()
+async def due(ctx):
+  author_id = ctx.author.id
+
+  message = ctx.message.content
+  taskSplit = ' '.join(message.split()[1:2])
+  dueToSplit = ' '.join(message.split()[2:])
+
+  #INSERT INTO `todolist` (`todo`, `due_to`, `user_id`) VALUES ('', 'yes', '') 
+  sql = "UPDATE todolist SET due_to = %s WHERE todo = %s and user_id = %s"
+  value = (dueToSplit, taskSplit, author_id)
+
+  cursor.execute(sql, value)
+
+  database.commit()
+
 # lists all of the todos from the database bound to ID
 @client.command()
 async def list(ctx):
   author_id = ctx.author.id
 
-  sql = "SELECT todo from todolist where user_id = %s"
+  sql = "SELECT todo, due_to from todolist where user_id = %s"
   value = (author_id,)
 
-  cursor.execute(sql, (value))
+  cursor.execute(sql, value)
 
   rows = cursor.fetchall()
   for row in rows:
-    await ctx.send(row["todo"])
+    value_todo = row["todo"]
+    value_due_to = row["due_to"]
+
+    if(value_due_to != ""):
+      await ctx.send(f'* "{value_todo}" is due to "{value_due_to}"')
+    else:
+      await ctx.send(f'* {value_todo}')
 
 # Clear todo list bound to ID
 @client.command()
@@ -97,6 +120,8 @@ async def removeall(ctx):
 
   database.commit()
 
+  await ctx.send("Cleared the List.")
+
 # Remove only one from todo list
 @client.command()
 async def remove(ctx):
@@ -108,6 +133,10 @@ async def remove(ctx):
 
   cursor.execute(sql, value)
 
-  database.commit()   
+  database.commit()
+
+  await ctx.send(f'Removed "{toDeleteSplit}" from the list.')   
+
+#Remove Due
 
 client.run('MTIwMjk4NjgyMDM1MTE2NDQxNg.GEbJCG.S3gZ9C2Y8TdRlRUcbPFOI5msZR7HkpqApaH3zk')
