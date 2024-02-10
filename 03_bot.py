@@ -83,9 +83,6 @@ async def due(ctx):
   taskSplit = ' '.join(message.split()[1:-1])
   dueToSplit = ' '.join(message.split()[-1:])
 
-  print(taskSplit)
-  print(dueToSplit)
-
   sql = "UPDATE todolist SET due_to = %s WHERE todo = %s and user_id = %s"
   value = (dueToSplit, taskSplit, author_id)
 
