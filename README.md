@@ -155,16 +155,27 @@ Ansonsten wurde dieses Ziel während den wöchentlichen Coding unter unseren Blo
 
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
-**Kritik zu unser Projekt von anderen:**
-
-[Critique for the group: Discord‐Reminder‐Bot](https://github.com/Tim10022023/ToDoListPythonProject/wiki/Critique-for-the-group:-Discord%E2%80%90Reminder%E2%80%90Bot)
-
-
 **Kritik für andere Gruppen:**
+
+Für ToDoListProject:
 
 [Critique for the group ToDoListPythonProject](https://github.com/SvenSrc/Programming-Habit/wiki/Critique-for-the-group:-ToDoListPythonProject) 
 
+Für Weathersite:
+
 [Critique for the group Weathersite](https://github.com/SvenSrc/Programming-Habit/wiki/Critique-for-the-group:-Weathersite)
+
+**Kritik zu unser Projekt von anderen:**
+
+Von ToDoListProject:
+
+
+[Critique for the group: Discord‐Reminder‐Bot](https://github.com/Tim10022023/ToDoListPythonProject/wiki/Critique-for-the-group:-Discord%E2%80%90Reminder%E2%80%90Bot)
+
+Von Weathersite:
+
+[Critique for group: Discord‐Reminder‐Bot](https://github.com/brudermaggi/weathersite/wiki/Critique-for-group:-Discord%E2%80%90Reminder%E2%80%90Bot)
+
 
 # Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 <!-- Which technology did you learn outside of the teacher given input -->
