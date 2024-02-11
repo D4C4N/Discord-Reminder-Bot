@@ -154,4 +154,4 @@ async def removedue(ctx):
 
   await ctx.send(f'Removed due from "{toDeleteDueSplit}".')   
 
-client.run('MTIwMjk4NjgyMDM1MTE2NDQxNg.GEbJCG.S3gZ9C2Y8TdRlRUcbPFOI5msZR7HkpqApaH3zk')
+client.run('Token')
