@@ -1,10 +1,10 @@
 #  Review: ToDoListPythonProject
+[ToDoListPythonProject](https://github.com/Tim10022023/ToDoListPythonProject)
+This project was made by [Wildeswiesel](https://github.com/Wildeswiesel), [Tim10022023](https://github.com/Tim10022023) and [nklshpf](https://github.com/nklshpf).
 
-This project was made by Wildeswiesel, Tim10022023 and nklshpf.
+It is about a To-Do List made through a website.
 
-It is about a To-Do List through a website.
-
-Review made by Daniel and Sven
+Review made by [Daniel](https://github.com/D4C4N) and [Sven](https://github.com/SvenSrc)
 
 # Grading Criteria Programmieren T3INF1004
 In jedem Unterbereich werden die Punkte (gerne auch Links ins GIT) erklärt, wie das LO erreicht worden ist.
@@ -63,7 +63,8 @@ else:
 # Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
 <!-- Anhand von commits zeigen, wie jeder im Projekt einen Beitrag geleistet hat -->
 
-Text
+![Screenshot 2024-02-26 145334](https://github.com/D4C4N/Discord-Reminder-Bot/assets/69164233/f5b1abe0-eccf-4f75-94f9-501cc9167c72)
+
 
 
 # Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
@@ -120,7 +121,7 @@ Noah: Probleme mit Github -> Branch konnte nicht gemerget werden (erklärt onlin
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
 
-Dies ist das Review für ToDoListPythonProject.
+[ToDoListPythonProject](https://github.com/Tim10022023/ToDoListPythonProject)
 
 # Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 <!-- Which technology did you learn outside of the teacher given input -->
@@ -216,7 +217,7 @@ Input waren der 'username' und 'password'
 Output ist abhängig, ob der obige Input übereinstimmt.
 Falls der übereinstimmt, kommt man zur Homepage, sonst bekommt man eine Nachricht, dass etwas falsch ist.
 
-# - Operatoren
+# Operatoren
 
 ```Python
  if request.method == 'POST' and current_user.is_authenticated:
