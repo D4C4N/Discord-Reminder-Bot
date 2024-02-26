@@ -137,9 +137,12 @@ Folglich wird die Zeile in der gewünschten Tabelle geupdated mit dem Datum.
 Es wurden diverse Tools verwendet, unter anderem Git (offensichtlich, wir befinden uns in dem Repo.). Anbei noch Screenshots, die die Verwendung von Visual Studio Code sowie Tools, wie ChatGPT nachweisen.
 
 **Visual Studio Code:**
+
 ![VSC](https://i.imgur.com/4iZMXy6.png)
 
+
 **ChatGPT**
+
 ![ChatGPT](https://i.imgur.com/jQy0atk.png)
 
 
@@ -159,7 +162,9 @@ Ansonsten wurde dieses Ziel während den wöchentlichen Coding unter unseren Blo
 
 Für ToDoListProject:
 
-[Critique for the group ToDoListPythonProject](https://github.com/SvenSrc/Programming-Habit/wiki/Critique-for-the-group:-ToDoListPythonProject) 
+[Review-GradingCriteria.md](https://github.com/D4C4N/Discord-Reminder-Bot/blob/main/Review-GradingCriteria.md)
+
+[Critique for the group ToDoListPythonProject](https://github.com/SvenSrc/Programming-Habit/wiki/Critique-for-the-group:-ToDoListPythonProject)
 
 Für Weathersite:
 
